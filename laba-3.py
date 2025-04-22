@@ -9,16 +9,17 @@
 #Выходные данные: 3.
 
 
-words = input('Список: ').split()
 
+lst = ['abc', 'bcd', 'abc', 'abd', 'abd', 'dcd', 'abc']
 counts = {}
 order = []
 
-for word in words:
-    if word not in counts:
-        counts[word] = 1
-        order.append(word)
+for i in lst:
+    if i not in counts:
+        counts[i] = 1
+        order.append(i)
     else:
-        counts[word] += 1
+        counts[i] += 1
 
-print(' '.join(map(str, [counts[word] for word in order])))
+results = [str(counts[k]) for k in order]
+print(' '.join(results))

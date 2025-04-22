@@ -1,8 +1,10 @@
-#Напишите программу, которая принимает 2 списка чисел и определяет количество общих чисел из первого и второго списка.
+#Напишите программу, которая будет выполнять действие, обратное заданию 1.
+# Программа должна производить поиск по значению и выдавать ключ.
 
-list1 = list(map(int, input('Список 1: ').split()))
-list2 = list(map(int, input('Список 2: ').split()))
 
-common = set(list1) & set(list2)
 
-print(len(common))
+data = {'Hello': 'Hi', 'Bye': 'Goodbye', 'List': 'Array'}
+value = input().strip()
+key = [k for k, v in data.items() if str(v) == value]
+if key:
+    print(key[0])
